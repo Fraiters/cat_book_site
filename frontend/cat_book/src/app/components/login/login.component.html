@@ -1,0 +1,25 @@
+<app-header></app-header>
+
+
+<h1>Авторизация</h1>
+
+<form [formGroup]="formLogin" (ngSubmit)="login()">
+    <fieldset>
+        <legend>Персональные данные</legend>
+        <ul>
+            <li>
+                <label>Логин:*</label>
+                <input type="text" formControlName="username">
+            </li>
+            <li>
+                <label>Пароль:*</label>
+                <input type="text" formControlName="password">
+            </li>
+        </ul>
+    </fieldset>
+
+    <div>
+        <button type="submit">Войти</button>
+        <p>* — Обязательные поля</p>
+    </div>
+</form>

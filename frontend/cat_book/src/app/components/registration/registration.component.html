@@ -1,0 +1,29 @@
+<app-header></app-header>
+
+
+<h1>Регистрация</h1>
+
+<form [formGroup]="formRegister" (ngSubmit)="registration()">
+  <fieldset>
+    <legend>Персональные данные</legend>
+    <ul>
+      <li>
+        <label>Логин:*</label>
+        <input type="text" formControlName="username">
+      </li>
+      <li>
+        <label>Пароль:*</label>
+        <input type="text" formControlName="password">
+      </li>
+      <li>
+        <label>Email:*</label>
+        <input type="email" formControlName="email">
+      </li>
+    </ul>
+  </fieldset>
+
+  <div>
+    <button type="submit">Регистрация</button>
+    <p>* — Обязательные поля</p>
+  </div>
+</form>

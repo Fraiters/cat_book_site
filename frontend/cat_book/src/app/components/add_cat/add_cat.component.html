@@ -1,0 +1,40 @@
+<app-header></app-header>
+
+
+<h1>Добавление кота</h1>
+
+<form [formGroup]="formCreateCat" (ngSubmit)="addCat()">
+    <fieldset>
+        <legend>Данные кота</legend>
+        <ul>
+            <li>
+                <label>Имя:</label>
+                <input type="text" formControlName="name">
+            </li>
+            <li>
+                <label>Возраст:</label>
+                <input type="text" formControlName="age">
+            </li>
+            <li>
+                <label>Порода:</label>
+                <input type="text" formControlName="breed">
+            </li>
+            <li>
+                <label>Вес:</label>
+                <input type="text" formControlName="weight">
+            </li>
+<!--            <li>-->
+<!--                <label>Фото:</label>-->
+<!--                <input type="file" accept=".jpeg, .jpg, .gif, .png" formControlName="photo">-->
+<!--            </li>-->
+            <li>
+                <label>Описание:</label>
+                <input type="text" formControlName="description">
+            </li>
+        </ul>
+    </fieldset>
+
+    <div>
+        <button type="submit">Добавить</button>
+    </div>
+</form>

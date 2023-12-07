@@ -1,0 +1,38 @@
+<app-header></app-header>
+
+
+<h1>{{ cat_obj.name }}</h1>
+
+<ul>
+<!--  <li *ngIf="cat_obj.photo != null" style="display: inline; padding: 10px">-->
+<!--    <h2>Фото:-->
+<!--      <br>-->
+<!--      <img src="{{ cat_obj.photo }}">-->
+<!--    </h2>-->
+<!--    <hr>-->
+<!--  </li>-->
+  <li>
+    <h2>Возраст: {{ cat_obj.age }}</h2>
+    <hr>
+  </li>
+  <li>
+    <h2>Порода: {{ cat_obj.breed }}</h2>
+    <hr>
+  </li>
+  <li>
+    <h2>Вес: {{ cat_obj.weight }}кг</h2>
+    <hr>
+  </li>
+  <li>
+    <h2>Описание: <br>
+      {{ cat_obj.description }} </h2>
+    <hr>
+  </li>
+  <li>
+    <h2>Автор: {{ cat_obj.author }}</h2>
+    <hr>
+  </li>
+</ul>
+
+<button *ngIf="cat_obj.author == user.username" routerLink="/upd_cat">Изменить</button>
+<button *ngIf="cat_obj.author == user.username" routerLink="/del_cat_page">Удалить</button>

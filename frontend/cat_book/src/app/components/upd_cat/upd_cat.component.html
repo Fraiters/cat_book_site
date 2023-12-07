@@ -1,0 +1,60 @@
+<app-header></app-header>
+
+
+<h1>Изменение кота</h1>
+
+
+<fieldset>
+    <legend>Старые данные кота</legend>
+    <ul>
+        <li>
+            <label>Имя: {{ cat_obj.name }}</label>
+        </li>
+        <li>
+            <label>Возраст: {{ cat_obj.age }}</label>
+        </li>
+        <li>
+            <label>Порода: {{ cat_obj.breed }}</label>
+        </li>
+        <li>
+            <label>Вес: {{ cat_obj.weight }}кг</label>
+        </li>
+        <li>
+            <label>Описание: <br>
+                {{ cat_obj.description }} </label>
+        </li>
+    </ul>
+</fieldset>
+
+
+<form [formGroup]="formUpdateCat" (ngSubmit)="updCat()">
+    <fieldset>
+        <legend>Новые данные кота</legend>
+        <ul>
+            <li>
+                <label>Имя:</label>
+                <input type="text" formControlName="name">
+            </li>
+            <li>
+                <label>Возраст:</label>
+                <input type="text" formControlName="age">
+            </li>
+            <li>
+                <label>Порода:</label>
+                <input type="text" formControlName="breed">
+            </li>
+            <li>
+                <label>Вес:</label>
+                <input type="text" formControlName="weight">
+            </li>
+            <li>
+                <label>Описание:</label>
+                <input type="text" formControlName="description">
+            </li>
+        </ul>
+    </fieldset>
+
+    <div>
+        <button  type="submit">Изменить</button>
+    </div>
+</form>

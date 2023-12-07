@@ -1,0 +1,22 @@
+<div>
+    <ul>
+        <li style="display: inline; padding: 10px">
+            <a routerLink="">Главная</a>
+        </li>
+        <li *ngIf="user != null" style="display: inline; padding: 10px">
+            <a>{{ user.username }}</a>
+        </li>
+        <li *ngIf="user == null" style="display: inline; padding: 10px">
+            <a routerLink="/login">Войти</a>
+        </li>
+        <li *ngIf="user == null" style="display: inline; padding: 10px">
+            <a routerLink="/registration">Регистрация</a>
+        </li>
+        <li *ngIf="user != null" style="display: inline; padding: 10px">
+            <a routerLink="/add_cat">Добавить кота</a>
+        </li>
+        <li *ngIf="user != null" style="display: inline; padding: 10px">
+            <a routerLink="/logout">Выйти</a>
+        </li>
+    </ul>
+</div>
