@@ -1,0 +1,6 @@
+Dockerfile
+db.sqlite3
+# docker-compose.yml
+# .dockerignore
+media
+cats/migrations
