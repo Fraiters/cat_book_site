@@ -1,0 +1,24 @@
+services:
+    client-backend:
+        image: python
+        restart: always
+        build:
+            context: backend/cat_book
+            dockerfile: Dockerfile
+        expose:
+          - 8000
+        ports:
+            - 8000:8000
+
+        command: "gunicorn cat_book.wsgi:application --bind 0.0.0.0:8000"
+
+    client-frontend:
+        image: js
+        restart: always
+        build:
+            context: frontend/cat_book
+            dockerfile: Dockerfile
+        expose:
+            - 4200
+        ports:
+            - "4200:4200"
